@@ -24,6 +24,6 @@ docker logs  name
 
 ## test  
 ``` shell
- curl  127.0.0.1:9999
+./test.sh  
 ``` 
 
