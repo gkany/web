@@ -5,3 +5,8 @@ curl http://${base_url}/api/v1/test -H "Content-Type:application/json" -H "autho
 
 echo " "
 
+curl http://${base_url}/api/v1/test 
+echo " "
+base_url="127.0.0.1:8051"
+curl http://${base_url}/api/v1/test 
+echo " "
