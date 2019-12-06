@@ -10,9 +10,13 @@ RUN mkdir /data/log/nginx -p
 ADD nginx/html /data/web
 ADD nginx/nginx.conf /etc/nginx/nginx.conf
 ADD nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-ADD nginx/conf.d/faucet.conf /etc/nginx/conf.d/faucet.conf
+ADD nginx/conf.d/flask.conf /etc/nginx/conf.d/flask.conf
+ADD nginx/conf.d/tornado.conf /etc/nginx/conf.d/tornado.conf
 
 EXPOSE 80
+EXPOSE 8042
+EXPOSE 8052
+
 ENTRYPOINT nginx -g "daemon off;"
 
 
