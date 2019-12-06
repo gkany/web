@@ -7,12 +7,13 @@ COPY ./app /app
 # RUN则是在镜像中执行命令
 #RUN ls /app
 
+RUN mkdir -p /data
+
 # 切换工作目录，便于执行其他命令
 WORKDIR /app
 
 # 安装启动web服务需要的依赖
-#RUN pip install redis flask
-RUN pip install flask
+RUN pip install flask redis -y
 
 # CMD代表镜像启动后默认执行的命令，这里要注意CMD打上中括号等同于exec执行命令
 # 不打中括号等同于 sh -c 执行命令
